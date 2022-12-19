@@ -60,9 +60,8 @@ li a.active, li a:hover {
 }
 
 section {
-    background: url(fondo.jpg) no-repeat;
     background-size: cover;
-    background-position: center center;
+    background: url(../../../images/logo.png) no-repeat center center;
     height: calc(100vh - 80px);
 }
 
