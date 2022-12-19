@@ -70,3 +70,5 @@ def register(request):
         messages.error(request, "Unsuccessful registration. Invalid information.")
     form = NewUserForm()
     return render(request=request, template_name="sneakers_online_store/components/register.html", context={"register_form":form})
+def search(request):
+    return render(request, 'sneakers_online_store/search.html')
