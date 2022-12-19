@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.contrib import messages
+from django.shortcuts import render, redirect
+
+from sneakers_online_store.forms import NewUserForm
 
 
 # Create your views here.
@@ -54,3 +57,16 @@ def checkout(request):
 # base page view-> This is the base page for all the pages
 def base(request):
     return render(request, 'sneakers_online_store/base.html')
+
+
+def register(request):
+    if request.method == 'POST':
+        form = NewUserForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            messages.success(request, "Registration successful.")
+            return redirect("sneakers_online_store:home")
+        messages.error(request, "Unsuccessful registration. Invalid information.")
+    form = NewUserForm()
+    return render(request=request, template_name="sneakers_online_store/components/register.html", context={"register_form":form})

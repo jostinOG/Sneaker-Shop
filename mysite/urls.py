@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('demoshop/', include('sneakers_online_store.urls')),
+    path('admin/', admin.site.urls),# Add this line to register the app with the project
+    path('demoshop/', include('sneakers_online_store.urls')),# Add this line to include the app's urls.py file
+    path('accounts/', include('django.contrib.auth.urls')),# Add this line to include the default Django authentication URLs (for login, logout, password management)
 ]

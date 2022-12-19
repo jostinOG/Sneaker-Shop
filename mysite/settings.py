@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sneakers_online_store', # Add this line to register the app with the project
+    'crispy_forms', # Add this line to register the app with the project
 ]
 
 MIDDLEWARE = [

@@ -1,6 +1,8 @@
 {% extends 'sneakers_online_store/base.html' %}
 {% load static %}
 {% block linkCSS %}
+    <!-- Custom styles for this template -->
+    <link href="{% static 'sneakers_online_store/stylesheet/navbar.css' %}" rel="stylesheet">
 {% endblock %}
 {% block navbar %}
     <!-- Navigation -->
@@ -27,7 +29,7 @@
                 <li><a href="{% url 'about' %}">About</a></li>
                 <li><a href="{% url 'contact' %}">Contact</a></li>
                 <li><a href="{% url 'login' %}">Login</a></li>
-                <li><a href="{% url 'register' %}">Register</a></li>
+                <li><a href="{% url '' %}">Register</a></li>
                 <li><a href="{% url 'cart' %}">Cart</a></li>
                 <li><a href="{% url 'search' %}">Search</a></li>
             </ul>
