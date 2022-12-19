@@ -1,12 +1,5 @@
-{% extends 'sneakers_online_store/base.html' %}
-{% load static %}
-{% block linkCSS %}
-    <!-- Custom styles for this template -->
-    <link href="{% static 'sneakers_online_store/stylesheet/navbar.css' %}" rel="stylesheet">
-{% endblock %}
-{% block navbar %}
-    <!-- Navigation -->
-   {% comment %} Create a navigation bar of an online shoe store that is adaptive to different platforms such as computer, mobile or
+<!-- Navigation -->
+{% comment %} Create a navigation bar of an online shoe store that is adaptive to different platforms such as computer, mobile or
     tablets. The navigation bar should have the following items: Home, About, Contact, Login, Register, Cart, and
     Search. The navigation bar should be responsive and should collapse into a hamburger menu on smaller screens. The
     navigation bar should be sticky and should be fixed at the top of the page. The navigation bar should have a logo on
@@ -21,21 +14,19 @@
     page. The navigation bar should have a home icon on the right side of the navigation bar. The home icon should be a
     link to the home page.
     {% endcomment %}
-    <nav>
-        <div class="nav-wrapper">
-            <a href="{% url 'home' %}" class="brand-logo left">Logo</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'about' %}">About</a></li>
-                <li><a href="{% url 'contact' %}">Contact</a></li>
-                <li><a href="{% url 'login' %}">Login</a></li>
-                <li><a href="{% url 'register' %}">Register</a></li>
-                <li><a href="{% url 'cart' %}">Cart</a></li>
-                <li><a href="{% url 'search' %}">Search</a></li>
-            </ul>
-        </div>
-    </nav>
-    <!-- End Navigation -->
-
-{% endblock %}
+<nav>
+    <div class="nav-wrapper">
+        <a href="{% url 'home' %}" class="brand-logo left">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'cart' %}">Cart</a></li>
+            <li><a href="{% url 'search' %}">Search</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- End Navigation -->
 
