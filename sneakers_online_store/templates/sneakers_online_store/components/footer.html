@@ -1,21 +1,150 @@
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h3>Footer header</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie
-                    justo. Sed nec molestie justo.</p>
+<!-- Create a footer for the page that is fixed to the bottom of the page  -->
+<!-- The footer is a table with 5 columns-->
+<!--create a style for the footer -->
+<style>
+    #footer {
+        background-color: #000000;
+        color: #FFFFFF;
+        clear: both;
+        text-align: center;
+        padding: 5px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    #footer a {
+        color: #FFFFFF;
+    }
+
+    #footer a:hover {
+        color: #FFFFFF;
+    }
+
+    .footer {
+        width: 100%;
+        display: table;
+        height: 100%;
+    }
+
+    .footer .footer-row {
+        display: table-row;
+    }
+
+    .footer .footer-cell {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .footer .footer-cell a {
+        display: block;
+        padding: 0 10px;
+    }
+
+    .footer .footer-cell a:hover {
+        text-decoration: none;
+    }
+
+    .footer .footer-cell .social {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .footer .footer-cell .social a {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #fff;
+        margin: 0 5px;
+        text-indent: -9999px;
+        transition: all 0.2s ease;
+    }
+
+    .footer .footer-cell .social a:hover {
+        background: #000;
+
+    }
+
+    .footer .footer-cell .social a.facebook {
+        background: url(https://www.facebook.com/images/fb_icon_325x325.png) no-repeat center center;
+        background-size: 24px 24px;
+
+    }
+
+    .footer .footer-cell .social a.twitter {
+        background: url(https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Twitter-128.png) no-repeat center center;
+        background-size: 24px 24px;
+    }
+
+    .footer .footer-cell .social a.google {
+        background: url(https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Google-128.png) no-repeat center center;
+        background-size: 24px 24px;
+    }
+
+    .footer .footer-cell .social a.instagram {
+        background: url(https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Instagram-128.png) no-repeat center center;
+        background-size: 24px 24px;
+    }
+
+    .footer .footer-cell .social a.youtube {
+        background: url(https://cdn1.iconfinder.com/data/icons/logotypes/32/youtube-512.png) no-repeat center center;
+        background-size: 24px 24px;
+    }
+
+    .footer .footer-cell .social a.linkedin {
+        background: url(https://cdn2.iconfinder.com/data/icons/social-icons-33/128/LinkedIn-128.png) no-repeat center center;
+        background-size: 24px 24px;
+    }
+
+</style>
+
+<!-- Create the footer -->
+<div id="footer">
+    <div class="footer">
+        <div class="footer-row">
+            <div class="footer-cell">
+                <a href="#">GIFT CARDS</a>
+                <a href="#">PROMOTIONS</a>
+                <a href="#">FIND A STORE</a>
+                <a href="#">SIGN UP FOR EMAIL</a>
+                <a href="#">BECOME A MEMBER</a>
+                <a href="#">NIKE JOURNAL</a>
+                <a href="#">SEND US FEEDBACK</a>
             </div>
-            <div class="col-md-4">
-                <h3>Footer header</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie
-                    justo. Sed nec molestie justo.</p>
+
+            <div class="footer-cell">
+                <!--GET HELP COLUMN -->
+                <a href="#">Order Status</a>
+                <a href="#">Shipping and Delivery</a>
+                <a href="#">Returns</a>
+                <a href="#">Payment Options</a>
+                <a href="#">Gift Card Balance</a>
+                <a href="#">Contact Us</a>
             </div>
-            <div class="col-md-4">
-                <h3>Footer header</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie
-                    justo. Sed nec molestie justo.</p>
+            <div class="footer-cell">
+                <a href="#">About Us</a>
+                <a href="#">News</a>
+                <a href="#">Careers</a>
+                <a href="#">Investors</a>
+                <a href="#">Purpose</a>
+                <a href="#">Sustainability</a>
+
+            </div>
+            <div class="footer-cell">
+                <div class="social">
+                    <!---->
+                    <!--SOCIAL NETWORKS COLUMN -->
+                    <a href="https://www.facebook.com/" class="facebook" target="_blank">Facebook</a>
+                    <a href="https://twitter.com/Nike" class="twitter">Twitter</a>
+                    <a href="https://www.instagram.com/nike/" class="instagram">Instagram</a>
+                    <a href="https://www.youtube.com/user/Nike" class="youtube">Youtube</a>
+                    <a href="https://www.linkedin.com/company/nike" class="linkedin">Linkedin</a>
+
+                </div>
             </div>
         </div>
     </div>
-</footer>
+</div>
+
+<!-- End of footer -->

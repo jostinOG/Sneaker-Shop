@@ -1,3 +1,4 @@
+{% load static %}
 <!-- Navigation -->
 {% comment %} Create a navigation bar of an online shoe store that is adaptive to different platforms such as computer, mobile or
     tablets. The navigation bar should have the following items: Home, About, Contact, Login, Register, Cart, and
@@ -14,19 +15,34 @@
     page. The navigation bar should have a home icon on the right side of the navigation bar. The home icon should be a
     link to the home page.
     {% endcomment %}
-<nav>
-    <div class="nav-wrapper">
-        <a href="{% url 'home' %}" class="brand-logo left">Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'contact' %}">Contact</a></li>
-            <li><a href="{% url 'login' %}">Login</a></li>
-            <li><a href="{% url 'register' %}">Register</a></li>
-            <li><a href="{% url 'cart' %}">Cart</a></li>
-            <li><a href="{% url 'search' %}">Search</a></li>
+<nav class="navbar">
+    <div class="navbar__container">
+        <a href="{% url 'home' %}" id="navbar__logo">
+            <!--Sneaker logo 1200px X 630px in size.-->
+            <img class="sneakers_logo" src="{% static 'sneakers_online_store/images/logo.png' %}" alt="logo"/>
+        </a>
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="{% url 'home' %}" class="navbar__links" id="home-page">Home</a>
+            </li>
+            <li class="navbar__item">
+                <a href="{% url 'about' %}" class="navbar__links" id="about-page">About</a>
+            </li>
+            <li class="navbar__item">
+                <a href="{% url 'cart' %}" class="navbar__links" id="services-page">Services</a>
+            </li>
+            <li class="navbar__item">
+                <a href="{% url 'contact' %}" class="navbar__links" id="contact-page">Contact Us</a>
+            </li>
+            <li class="navbar__item">
+                <a href="{% url 'register' %}" class="button">Sign Up</a>
+            </li>
         </ul>
     </div>
 </nav>
 <!-- End Navigation -->
-
